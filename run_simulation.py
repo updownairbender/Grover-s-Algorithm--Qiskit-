@@ -1,4 +1,5 @@
 """Run Grover's algorithm locally using StatevectorSampler."""
+import os
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -10,8 +11,7 @@ from src.config import N_QUBITS, TARGET_STATE, SHOTS
 OUTPUT_DIR = 'output'
 
 
-def main():
-    import os
+def main() -> None:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     qc = grover_search(N_QUBITS, TARGET_STATE)
@@ -24,7 +24,7 @@ def main():
 
     sampler = StatevectorSampler()
     result = sampler.run([qc], shots=SHOTS).result()
-    counts = result[0].data.meas.get_counts()
+    counts: dict[str, int] = result[0].data.meas.get_counts()
 
     print(f"Target state: |{TARGET_STATE}>")
     print(f"Measured counts: {counts}")

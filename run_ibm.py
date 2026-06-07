@@ -1,4 +1,5 @@
 """Run Grover's algorithm on a real IBM Quantum backend."""
+import os
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -16,8 +17,7 @@ except ImportError:
     raise
 
 
-def main():
-    import os
+def main() -> None:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     if not IBM_TOKEN:
@@ -49,7 +49,7 @@ def main():
     print(f"Job ID: {job.job_id()}")
 
     result = job.result()
-    counts = result[0].data.meas.get_counts()
+    counts: dict[str, int] = result[0].data.meas.get_counts()
 
     print(f"Target state: |{TARGET_STATE}>")
     print(f"Measured counts: {counts}")
