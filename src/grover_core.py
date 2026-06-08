@@ -37,7 +37,7 @@ def grover_search(
     oracle = build_oracle(n_qubits, target_state)
     diffuser = build_diffuser(n_qubits)
 
-    for _ in range(n_iterations - 1):
+    for _ in range(n_iterations):
         qc.append(oracle, range(n_qubits))
         qc.append(diffuser, range(n_qubits))
 
