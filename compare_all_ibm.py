@@ -155,7 +155,7 @@ def main() -> None:
             print(f"Saved {label}_circuit.png")
 
         print(f"Submitting {label} to IBM Quantum...")
-        job = sampler.run([qc], shots=SHOTS)
+        job = sampler.run([(qc, None, SHOTS)])
         result = job.result()
 
         counts: dict[str, int] = result[0].data.meas.get_counts()
