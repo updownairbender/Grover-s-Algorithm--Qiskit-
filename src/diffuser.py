@@ -19,7 +19,7 @@ def _apply_mcz_v1(qc: QuantumCircuit, n_qubits: int) -> None:
 
 def _apply_mcz_v2(qc: QuantumCircuit, n_qubits: int) -> None:
     """MCZ via ZGate().control()."""
-    qc.append(ZGate().control(n_qubits - 1), range(n_qubits))
+    qc.append(ZGate().control(n_qubits - 1, annotated=False), range(n_qubits))
 
 
 def _build_diffuser(n_qubits: int, mcz_fn: Callable[[QuantumCircuit, int], None], name: str) -> Gate:
