@@ -1,0 +1,334 @@
+{
+  "qubit_range": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "results": [
+    {
+      "n_qubits": 3,
+      "combo": "O1+D1",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 21,
+      "raw_gates": 47,
+      "transpiled_depth": 59,
+      "transpiled_gates": 103
+    },
+    {
+      "n_qubits": 3,
+      "combo": "O1+D2",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 17,
+      "raw_gates": 43,
+      "transpiled_depth": 59,
+      "transpiled_gates": 103
+    },
+    {
+      "n_qubits": 3,
+      "combo": "O2+D1",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 21,
+      "raw_gates": 43,
+      "transpiled_depth": 59,
+      "transpiled_gates": 103
+    },
+    {
+      "n_qubits": 3,
+      "combo": "O2+D2",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 17,
+      "raw_gates": 39,
+      "transpiled_depth": 59,
+      "transpiled_gates": 103
+    },
+    {
+      "n_qubits": 4,
+      "combo": "O1+D1",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 31,
+      "raw_gates": 88,
+      "transpiled_depth": 180,
+      "transpiled_gates": 264
+    },
+    {
+      "n_qubits": 4,
+      "combo": "O1+D2",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 25,
+      "raw_gates": 82,
+      "transpiled_depth": 180,
+      "transpiled_gates": 264
+    },
+    {
+      "n_qubits": 4,
+      "combo": "O2+D1",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 31,
+      "raw_gates": 82,
+      "transpiled_depth": 180,
+      "transpiled_gates": 264
+    },
+    {
+      "n_qubits": 4,
+      "combo": "O2+D2",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 25,
+      "raw_gates": 76,
+      "transpiled_depth": 180,
+      "transpiled_gates": 264
+    },
+    {
+      "n_qubits": 5,
+      "combo": "O1+D1",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 41,
+      "raw_gates": 141,
+      "transpiled_depth": 639,
+      "transpiled_gates": 871
+    },
+    {
+      "n_qubits": 5,
+      "combo": "O1+D2",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 33,
+      "raw_gates": 133,
+      "transpiled_depth": 639,
+      "transpiled_gates": 871
+    },
+    {
+      "n_qubits": 5,
+      "combo": "O2+D1",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 41,
+      "raw_gates": 133,
+      "transpiled_depth": 639,
+      "transpiled_gates": 871
+    },
+    {
+      "n_qubits": 5,
+      "combo": "O2+D2",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 33,
+      "raw_gates": 125,
+      "transpiled_depth": 639,
+      "transpiled_gates": 871
+    },
+    {
+      "n_qubits": 6,
+      "combo": "O1+D1",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 61,
+      "raw_gates": 246,
+      "transpiled_depth": 1983,
+      "transpiled_gates": 2874
+    },
+    {
+      "n_qubits": 6,
+      "combo": "O1+D2",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 49,
+      "raw_gates": 234,
+      "transpiled_depth": 1983,
+      "transpiled_gates": 2874
+    },
+    {
+      "n_qubits": 6,
+      "combo": "O2+D1",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 61,
+      "raw_gates": 234,
+      "transpiled_depth": 1983,
+      "transpiled_gates": 2874
+    },
+    {
+      "n_qubits": 6,
+      "combo": "O2+D2",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 49,
+      "raw_gates": 222,
+      "transpiled_depth": 1983,
+      "transpiled_gates": 2874
+    },
+    {
+      "n_qubits": 7,
+      "combo": "O1+D1",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 81,
+      "raw_gates": 375,
+      "transpiled_depth": 3379,
+      "transpiled_gates": 5445
+    },
+    {
+      "n_qubits": 7,
+      "combo": "O1+D2",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 65,
+      "raw_gates": 359,
+      "transpiled_depth": 3379,
+      "transpiled_gates": 5445
+    },
+    {
+      "n_qubits": 7,
+      "combo": "O2+D1",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 81,
+      "raw_gates": 359,
+      "transpiled_depth": 3379,
+      "transpiled_gates": 5445
+    },
+    {
+      "n_qubits": 7,
+      "combo": "O2+D2",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 65,
+      "raw_gates": 343,
+      "transpiled_depth": 3379,
+      "transpiled_gates": 5445
+    },
+    {
+      "n_qubits": 8,
+      "combo": "O1+D1",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 121,
+      "raw_gates": 632,
+      "transpiled_depth": 7011,
+      "transpiled_gates": 11688
+    },
+    {
+      "n_qubits": 8,
+      "combo": "O1+D2",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 97,
+      "raw_gates": 608,
+      "transpiled_depth": 7011,
+      "transpiled_gates": 11688
+    },
+    {
+      "n_qubits": 8,
+      "combo": "O2+D1",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 121,
+      "raw_gates": 608,
+      "transpiled_depth": 7011,
+      "transpiled_gates": 11688
+    },
+    {
+      "n_qubits": 8,
+      "combo": "O2+D2",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 97,
+      "raw_gates": 584,
+      "transpiled_depth": 7011,
+      "transpiled_gates": 11688
+    },
+    {
+      "n_qubits": 9,
+      "combo": "O1+D1",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 171,
+      "raw_gates": 995,
+      "transpiled_depth": 13926,
+      "transpiled_gates": 22280
+    },
+    {
+      "n_qubits": 9,
+      "combo": "O1+D2",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 137,
+      "raw_gates": 961,
+      "transpiled_depth": 13926,
+      "transpiled_gates": 22280
+    },
+    {
+      "n_qubits": 9,
+      "combo": "O2+D1",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 171,
+      "raw_gates": 961,
+      "transpiled_depth": 13926,
+      "transpiled_gates": 22280
+    },
+    {
+      "n_qubits": 9,
+      "combo": "O2+D2",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 137,
+      "raw_gates": 927,
+      "transpiled_depth": 13926,
+      "transpiled_gates": 22280
+    },
+    {
+      "n_qubits": 10,
+      "combo": "O1+D1",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 251,
+      "raw_gates": 1610,
+      "transpiled_depth": 31128,
+      "transpiled_gates": 45155
+    },
+    {
+      "n_qubits": 10,
+      "combo": "O1+D2",
+      "oracle": "oracle_v1",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 201,
+      "raw_gates": 1560,
+      "transpiled_depth": 31128,
+      "transpiled_gates": 45155
+    },
+    {
+      "n_qubits": 10,
+      "combo": "O2+D1",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v1",
+      "raw_depth": 251,
+      "raw_gates": 1560,
+      "transpiled_depth": 31128,
+      "transpiled_gates": 45155
+    },
+    {
+      "n_qubits": 10,
+      "combo": "O2+D2",
+      "oracle": "oracle_v2",
+      "diffuser": "diffuser_v2",
+      "raw_depth": 201,
+      "raw_gates": 1510,
+      "transpiled_depth": 31128,
+      "transpiled_gates": 45155
+    }
+  ]
+}
