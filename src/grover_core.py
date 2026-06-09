@@ -29,6 +29,7 @@ def grover_search(
     qc = QuantumCircuit(n_qubits)
 
     qc.h(range(n_qubits))
+    qc.barrier()
 
     if n_iterations is None:
         N = 2 ** n_qubits
@@ -37,8 +38,11 @@ def grover_search(
     oracle = build_oracle(n_qubits, target_state)
     diffuser = build_diffuser(n_qubits)
 
-    for _ in range(n_iterations):
+    for i in range(n_iterations):
         qc.append(oracle, range(n_qubits))
+        qc.barrier()
         qc.append(diffuser, range(n_qubits))
+        if i < n_iterations - 1:
+            qc.barrier()
 
     return qc
