@@ -1,12 +1,15 @@
 """Compare circuit depth and gate count across all oracle/diffuser combinations."""
 import json
 import os
+import math
 
 import matplotlib   
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from qiskit import QuantumCircuit
 from qiskit.converters import circuit_to_dag
+from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
+from qiskit.providers.fake_provider import GenericBackendV2
 
 from src.config import N_QUBITS, TARGET_STATE
 from src.oracles import build_oracle_v1, build_oracle_v2
@@ -47,16 +50,31 @@ def build_full_circuit(oracle_name: str, diffuser_name: str) -> QuantumCircuit:
 
     qc = QuantumCircuit(N_QUBITS, name=f'{oracle_name}+{diffuser_name}')
     qc.h(range(N_QUBITS))
-    import math
+    qc.barrier()
     n_iterations = int(math.pi / 4 * math.sqrt(2 ** N_QUBITS))
-    for _ in range(n_iterations):
+    for i in range(n_iterations):
         qc.append(oracle_gate, range(N_QUBITS))
+        qc.barrier()
         qc.append(diffuser_gate, range(N_QUBITS))
+        if i < n_iterations - 1:
+            qc.barrier()
     return qc
 
 
 def main() -> None:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    backend = GenericBackendV2(
+        num_qubits=N_QUBITS,
+        coupling_map=None,
+        basis_gates=['id', 'rz', 'sx', 'x', 'cx', 'reset'],
+        seed=42,
+    )
+    pm = generate_preset_pass_manager(
+        backend=backend,
+        optimization_level=1,
+        seed_transpiler=42,
+    )
 
     rows: list[dict] = []
 
@@ -73,6 +91,13 @@ def main() -> None:
             'total_gates': total_gates,
             'gate_breakdown': dict(sorted(ops.items())),
         })
+
+        # save transpiled circuit diagram for each combo
+        qc_transpiled = pm.run(qc)
+        fig_circ = qc_transpiled.draw('mpl')
+        fig_circ.savefig(f'{OUTPUT_DIR}/{label}_circuit.png', bbox_inches='tight')
+        plt.close(fig_circ)
+        print(f"Circuit saved: {OUTPUT_DIR}/{label}_circuit.png")
 
     # save JSON
     with open(os.path.join(OUTPUT_DIR, 'depth_comparison.json'), 'w') as f:
